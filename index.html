@@ -107,25 +107,28 @@
     </div>
   </div>
 
-  <script>
+    <script>
     const galleryItems = [
       { type: "image", src: "assets/images/qr-king.jpg", title: "King Bed Making Demo", desc: "QR Code + Video Link" },
       { type: "image", src: "assets/images/qr-twin.jpg", title: "Twin Bed Making Demo", desc: "QR Code + Video Link" },
-      { type: "image", src: "assets/images/wyndham.jpg", title: "Wyndham Garden", desc: "" },
-      { type: "image", src: "assets/images/millennium.jpg", title: "Millennium Resort Salalah", desc: "" },
-      { type: "image", src: "assets/images/swiss-belinn.jpg", title: "Swiss-Belinn Hotel", desc: "" },
-      // Nicher line gulo copy kore notun photo/video add koro
-      // { type: "video", src: "assets/videos/king-bed-demo.mp4", title: "King Bed Full Demo", desc: "2:15 min" },
+      { type: "image", src: "assets/images/wyndham.jpg", title: "Wyndham Garden", desc: "Housekeeping Experience" },
+      { type: "image", src: "assets/images/millennium.jpg", title: "Millennium Resort Salalah", desc: "Guest Services" },
+      { type: "image", src: "assets/images/swiss-belinn.jpg", title: "Swiss-Belinn Hotel", desc: "Current Role" },
     ];
 
     const container = document.getElementById('gallery');
     galleryItems.forEach(item => {
       const card = document.createElement('div');
-      card.className = "bg-white/10 rounded-2xl overflow-hidden";
+      card.className = "bg-white/10 rounded-3xl overflow-hidden shadow-xl";   // boro + sundor
       if (item.type === "video") {
         card.innerHTML = `<video controls class="w-full"><source src="${item.src}" type="video/mp4"></video><div class="p-4"><p class="font-semibold">${item.title}</p></div>`;
       } else {
-        card.innerHTML = `<img src="${item.src}" class="w-full h-56 object-cover"><div class="p-4"><p class="font-semibold">${item.title}</p><p class="text-sm text-gray-400">${item.desc}</p></div>`;
+        card.innerHTML = `
+          <img src="${item.src}" class="w-full h-64 object-contain bg-white p-4">   <!-- QR boro + clear -->
+          <div class="p-4 text-center">
+            <p class="font-semibold text-lg">${item.title}</p>
+            <p class="text-sm text-gray-400">${item.desc}</p>
+          </div>`;
       }
       container.appendChild(card);
     });
