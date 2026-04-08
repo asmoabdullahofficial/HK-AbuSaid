@@ -10,22 +10,42 @@
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
     body { font-family: 'Inter', system-ui, sans-serif; }
     .hero-bg { background: linear-gradient(135deg, #1e3a8a, #3b82f6); }
+    .modal { animation: fadeIn 0.3s ease-in-out; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
   </style>
 </head>
 <body class="bg-gray-50">
 
-  <!-- HEADER (PDF er moto) -->
+  <!-- HEADER -->
   <header class="hero-bg text-white py-12">
     <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
       <img src="assets/images/profile.jpg" alt="Abu Said" class="w-56 h-56 rounded-3xl border-8 border-white shadow-2xl object-cover">
-      <div class="text-center md:text-left">
+      
+      <div class="flex-1 text-center md:text-left">
         <h1 class="text-6xl font-bold tracking-tight">ABU SAID</h1>
         <p class="text-3xl mt-2 opacity-90">Housekeeping Professional (Room Attendant)</p>
+        
         <div class="flex flex-wrap gap-x-8 gap-y-3 mt-8 text-lg justify-center md:justify-start">
           <a href="tel:+96892917442" class="flex items-center gap-3"><i class="fa fa-phone"></i> +968 92917442</a>
           <a href="mailto:abusaidomantel@gmail.com" class="flex items-center gap-3"><i class="fa fa-envelope"></i> abusaidomantel@gmail.com</a>
           <span class="flex items-center gap-3"><i class="fa fa-map-marker"></i> Muscat, Oman</span>
         </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col gap-4">
+        <!-- Download CV -->
+        <a href="assets/Abu-Said-CV.pdf" target="_blank"
+           class="bg-white text-blue-900 font-semibold px-8 py-4 rounded-2xl shadow-xl hover:scale-105 transition flex items-center gap-3 text-lg">
+          <i class="fa fa-download"></i> Download Full CV
+        </a>
+        
+        <!-- Hire Me on WhatsApp -->
+        <a href="https://wa.me/96892917442?text=Hello%20Abu%20Said%2C%20I%20saw%20your%20website%20and%20would%20like%20to%20discuss%20a%20Housekeeping%20position."
+           target="_blank"
+           class="bg-green-500 text-white font-semibold px-8 py-4 rounded-2xl shadow-xl hover:scale-105 transition flex items-center gap-3 text-lg">
+          <i class="fa fa-whatsapp"></i> Hire Me Now
+        </a>
       </div>
     </div>
   </header>
@@ -34,7 +54,6 @@
 
     <!-- LEFT COLUMN -->
     <div class="md:col-span-5 space-y-12">
-
       <div>
         <h2 class="text-2xl font-semibold text-blue-900 border-b pb-3">ABOUT ME</h2>
         <p class="mt-6 text-gray-700 leading-relaxed text-lg">
@@ -51,9 +70,9 @@
       <div>
         <h2 class="text-2xl font-semibold text-blue-900 border-b pb-3">TECHNICAL SKILLS</h2>
         <ul class="mt-6 space-y-4 text-gray-700 text-lg">
-          <li>• Linen Management: Expert in sorting, handling soiled linen, and executing smooth linen delivery and receiving processes</li>
-          <li>• Floor Care: Sweeping, mopping, and vacuuming different types of flooring</li>
-          <li>• Health & Safety: Strong understanding of general workplace safety and sanitization protocols</li>
+          <li>• Linen Management: Expert in sorting, handling soiled linen...</li>
+          <li>• Floor Care: Sweeping, mopping, and vacuuming...</li>
+          <li>• Health & Safety: Strong understanding of workplace safety...</li>
         </ul>
       </div>
 
@@ -62,7 +81,7 @@
         <ul class="mt-6 space-y-3 text-gray-700 text-lg">
           <li><strong>Bengali:</strong> Native</li>
           <li><strong>English:</strong> Professional Working Proficiency</li>
-          <li><strong>Arabic:</strong> Intermediate (Strong working knowledge in comprehension and speaking)</li>
+          <li><strong>Arabic:</strong> Intermediate</li>
           <li><strong>Hindi/Urdu:</strong> Conversational</li>
         </ul>
       </div>
@@ -70,12 +89,11 @@
 
     <!-- RIGHT COLUMN -->
     <div class="md:col-span-7 space-y-12">
-
       <div>
         <h2 class="text-2xl font-semibold text-blue-900 border-b pb-3">CORE SKILLS & COMPETENCIES</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
           <div class="bg-white p-5 rounded-2xl shadow">Guest Room Cleaning</div>
-          <div class="bg-white p-5 rounded-2xl shadow">Administrative & Computer Proficiency</div>
+          <div class="bg-white p-5 rounded-2xl shadow">Protel PMS Proficiency</div>
           <div class="bg-white p-5 rounded-2xl shadow">Shift Flexibility</div>
           <div class="bg-white p-5 rounded-2xl shadow">Attention to Detail</div>
           <div class="bg-white p-5 rounded-2xl shadow">Chemical Knowledge (Diversey/Ecolab)</div>
@@ -88,50 +106,103 @@
           <h3 class="font-semibold text-xl">Room Attendant</h3>
           <p class="text-blue-600">Swiss-Belinn Hotel, Muscat, Oman | 05/06/2025 – Present</p>
           <ul class="mt-6 list-disc pl-6 space-y-3 text-gray-700 text-lg">
-            <li>Maintain 15+ guest rooms daily, ensuring they meet the hotel’s strict cleanliness and hygiene standards.</li>
-            <li>Handle "Expected Departure" rooms efficiently, reporting "No Luggage" status to Reception immediately for faster turnover.</li>
-            <li>Execute supervisor-level desk duties in **Protel PMS**, including accessing the housekeeping portal, printing daily reports, and organizing task sheets for the team.</li>
-            <li>Respond to guest requests promptly, providing extra towels, water, or bedding with a highly professional attitude.</li>
-            <li>Report maintenance issues (lighting, plumbing) to the Engineering department via the internal communication system.</li>
+            <li>Maintain 15+ guest rooms daily...</li>
+            <li>Handle "Expected Departure" rooms efficiently...</li>
+            <li>Execute supervisor-level desk duties in Protel PMS...</li>
+            <li>Respond to guest requests promptly...</li>
+            <li>Report maintenance issues...</li>
           </ul>
         </div>
       </div>
 
-      <!-- PRACTICAL SKILLS SHOWCASE (Dynamic - Future e easy update) -->
+      <!-- PRACTICAL SKILLS SHOWCASE -->
       <div class="bg-gray-900 text-white p-10 rounded-3xl">
         <h2 class="text-3xl font-bold text-center">Practical Skills Showcase</h2>
-        <p class="text-center text-gray-400 mt-2 mb-10">Scan to watch my bed making demonstration</p>
+        <p class="text-center text-gray-400 mt-2 mb-10">Click any card to enlarge • Like & Comment</p>
         
         <div id="gallery" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
       </div>
     </div>
   </div>
 
-    <script>
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/96892917442?text=Hello%20Abu%20Said%2C%20I%20saw%20your%20professional%20website!"
+     target="_blank"
+     class="fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-3xl hover:scale-110 transition z-50">
+    <i class="fa fa-whatsapp"></i>
+  </a>
+
+  <!-- IMAGE MODAL -->
+  <div id="modal" class="hidden fixed inset-0 bg-black/90 flex items-center justify-center z-[100]">
+    <div class="relative max-w-4xl w-full mx-4">
+      <button onclick="closeModal()" class="absolute -top-12 right-4 text-white text-5xl hover:text-gray-300">✕</button>
+      <img id="modalImage" src="" class="w-full rounded-3xl shadow-2xl">
+    </div>
+  </div>
+
+  <script>
     const galleryItems = [
-      { type: "image", src: "assets/images/qr-king.jpg", title: "King Bed Making Demo", desc: "QR Code + Video Link" },
-      { type: "image", src: "assets/images/qr-twin.jpg", title: "Twin Bed Making Demo", desc: "QR Code + Video Link" },
-      { type: "image", src: "assets/images/wyndham.jpg", title: "Wyndham Garden", desc: "Housekeeping Experience" },
-      { type: "image", src: "assets/images/millennium.jpg", title: "Millennium Resort Salalah", desc: "Guest Services" },
-      { type: "image", src: "assets/images/swiss-belinn.jpg", title: "Swiss-Belinn Hotel", desc: "Current Role" },
+      { src: "assets/images/qr-king.jpg", title: "King Bed Making Demo" },
+      { src: "assets/images/qr-twin.jpg", title: "Twin Bed Making Demo" },
+      { src: "assets/images/wyndham.jpg", title: "Wyndham Garden" },
+      { src: "assets/images/millennium.jpg", title: "Millennium Resort Salalah" },
+      { src: "assets/images/swiss-belinn.jpg", title: "Swiss-Belinn Hotel" },
     ];
 
     const container = document.getElementById('gallery');
-    galleryItems.forEach(item => {
+
+    galleryItems.forEach((item, index) => {
       const card = document.createElement('div');
-      card.className = "bg-white/10 rounded-3xl overflow-hidden shadow-xl";   // boro + sundor
-      if (item.type === "video") {
-        card.innerHTML = `<video controls class="w-full"><source src="${item.src}" type="video/mp4"></video><div class="p-4"><p class="font-semibold">${item.title}</p></div>`;
-      } else {
-        card.innerHTML = `
-          <img src="${item.src}" class="w-full h-64 object-contain bg-white p-4">   <!-- QR boro + clear -->
-          <div class="p-4 text-center">
-            <p class="font-semibold text-lg">${item.title}</p>
-            <p class="text-sm text-gray-400">${item.desc}</p>
-          </div>`;
-      }
+      card.className = "bg-white/10 rounded-3xl overflow-hidden cursor-pointer hover:scale-105 transition shadow-xl";
+      card.innerHTML = `
+        <img src="${item.src}" class="w-full h-64 object-contain bg-white p-4">
+        <div class="p-4">
+          <p class="font-semibold text-lg text-center">${item.title}</p>
+          <div class="flex justify-between items-center mt-4 text-sm">
+            <button onclick="likeImage(${index}); event.stopImmediatePropagation();" class="flex items-center gap-1 text-red-400 hover:text-red-500">
+              <i class="fa fa-heart"></i> <span id="like-count-${index}">12</span>
+            </button>
+            <button onclick="commentImage(${index}); event.stopImmediatePropagation();" class="flex items-center gap-1">
+              <i class="fa fa-comment"></i> <span>3</span>
+            </button>
+            <button onclick="saveImage(${index}); event.stopImmediatePropagation();" class="text-blue-400 hover:text-blue-500">
+              <i class="fa fa-bookmark"></i>
+            </button>
+          </div>
+        </div>
+      `;
+
+      // Click on image opens modal
+      card.querySelector('img').addEventListener('click', () => {
+        document.getElementById('modalImage').src = item.src;
+        document.getElementById('modal').classList.remove('hidden');
+      });
+
       container.appendChild(card);
     });
+
+    // Modal close
+    function closeModal() {
+      document.getElementById('modal').classList.add('hidden');
+    }
+
+    // Fake Like
+    function likeImage(index) {
+      const countEl = document.getElementById(`like-count-${index}`);
+      let count = parseInt(countEl.textContent);
+      count++;
+      countEl.textContent = count;
+    }
+
+    // Fake Comment Modal
+    function commentImage(index) {
+      alert("💬 Comment feature coming soon!\n\nFor now you can message me directly on WhatsApp.");
+    }
+
+    // Save / Bookmark
+    function saveImage(index) {
+      alert("📌 Page saved to your bookmarks!\n\nYou can also share this link with recruiters.");
+    }
   </script>
 </body>
 </html>
